@@ -9,14 +9,18 @@
     /* Global Styles*/
     body{
         margin: 0;
-        font-family: 'Segoe UI' 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: rgb(240, 255, 255);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e2ebf6;
     }
 
     /* Navigation Bar*/
     .topnav{
-        overflow: hidden;
-        background-color: #333;
+        display: flex;
+        gap: 30px;
+        background-color: #615b5b;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
     }
     .topnav a{
         float: left;
@@ -36,69 +40,92 @@
     }
     .pimg1{
 
-opacity: 0.70;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-image: url(https://images.vexels.com/media/users/3/126404/raw/2f64965dcb832c562042f9dbcd9babc7-elon-musk-illustration.jpg);
-min-height: 400px;
-}
-.section{
-text-align: center;
-padding: 50px 30px;
-}
-.section-dark{
-background-color: rgba(38, 226, 69, 0.26);
-color: rgb(0, 0, 0);
-}
-.ptext{
-position: absolute;
-top: 50%;
-width: 100%;
-color: aliceblue;
-text-align: center;
-font-size: 28px;
-}
-.ptext .border{
-background-color: #111;
-color: #fff;
-padding: 20px;
-}
-.ptext .border .trans{
-background-color: transparent;
-}
-a{
-text-align: center;
-text-decoration: double;
-}
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(https://codingal.s3.amazonaws.com/media/userdata/821895/avatars/IMG-20240813-WA00382b3b4e04-bc1d-44e0-9de5-8bf4c75df3e9.jpg);
+    min-height: 400px;
+    }
+    .section{
+    text-align: center;
+    padding: 50px 30px;
+    }
+    .section-dark{
+    color: rgb(0, 0, 0);
+    }
+    .ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: aliceblue;
+    text-align: center;
+    font-size: 28px;
+    }
+    .ptext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    }
+   .ptext .border .trans{
+    background-color: transparent;
+    }
+    a{
+    text-align: center;
+    text-decoration: double;
+    }
+    #aniverse{
+        font-family: cursive;
+    }
+    .about-container{
+        max-width: 1100px;
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-left: 210px;
+        background-color: #ede2f6;
+    }
+    .footer{
+        background-color: #111;
+        color: #fff;
+        text-align: center;
+    }
+
 </style>
 <body>
     
     <!--Navigation Bar-->
     <div class="topnav">
-        <a href="index.html">HOME</a>
-        <a class="active" href="about.html">ABOUT ME</a>
+        <a class="active" href="index.html">HOME</a>
         <a href="contactme.html">CONTACT ME</a>
         <a href="work.html">MY WORK</a>
-        <a href="gallery.html">GALLERY</a>
+        <a href="certificates.html">ACHIEVEMENTS</a>
+        <a href="projects.html">PROJECTS</a>
     </div>
 
     <!--Welcome Banner-->
     <div class="pimg1">
-        <div class="ptext">"Success is not final, failure is not fatal: it is the courage to continue that counts.
-            - Winston Churchill "        </div>
-    </div>
+        <div class="ptext">"Success is the best revenge"
+            - Kanye West       </div>
+    </div> <br> <br>
 
+    <div class="about-container">
     <!--Intro Section-->
     <section class="section section-dark">
-        <h2>WELCOME TO ANINDYA'S UNIVERSE!</h2>
-        <p>Hi, I am <strong>Anindya</strong>!</p>
+        <h2 id="aniverse">WELCOME TO ANINDYA'S UNIVERSE!</h2>
+        <p>Hi, I am <strong>Anindya Ghosh</strong>!</p>
         <p>I’m a passionate and ambitious student from Bangladesh, currently in grade 8, studying under an international curriculum at Vertical Horizon. I have a deep love for science—especially astronomy, physics, and mathematics—which has led me to participate in academic competitions and Olympiads.</p>
         <p>One of my proudest achievements was becoming the champion of the Bangladesh Astronomy Olympiad (BDAAO) 2024 regional round and advancing to the national level. I dream of becoming an aerospace engineer, and I’m always looking for ways to challenge myself in math and physics to move closer to that goal.</p>
         <p>Beyond academics, I’m a creative and expressive person. I play the guitar, piano, and cajón, and music is a big part of who I am. I’ve also created a game on Roblox and run a personal project called Explorer’s Notebook, which allows me to combine learning with creativity.</p>
         <p><strong>My Github : </strong> <a href="https://github.com/ani67h?tab=repositories">ani67h</a></p>
     </section>
+
+    </div> <br> 
+
+    <div class="footer">
+        <p>@Copy All Right Reserved</p>
+    </div>
 
 </body>
 </html>
