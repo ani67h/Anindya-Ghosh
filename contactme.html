@@ -34,20 +34,48 @@
     a{
         text-decoration: none;
     }
+    footer{
+    text-align: center;
+    background-color: #333;
+    color: #f8f9fa;
+    }
+
 </style>
 
 <body>
     
     <br> <br> <h2>Contact Me</h2> <br>  <br>
     <p id="hi">Whether you’ve got a brilliant idea, a challenging problem, or just want to say “hey,” I’d love to hear from you. My inbox is always open — no message is too small, too weird, or too ambitious. Let’s build something cool together, brainstorm the next big thing, or simply talk about space, code, or coffee. Drop in anytime — I don’t bite</p> <br> <br> <br> <br>
-    
+
     <div class="container">
+    <div class="form">
+        <form action="https://formspree.io/f/xjkwjlng" method="POST">
+            <label for="name">NAME : </label> <br>
+            <input type="text" name="name" required style="width: 470px; padding:0.5rem; margin-bottom:1rem;"> <br> <br>
+
+            <label for="email">EMAIL : </label> <br>
+            <input type="email" name="_replyto" required style="width:470px; padding:0.5rem; margin-bottom:1rem;"> <br> <br>
+
+            <label for="message">MESSAGE : </label> <br>
+            <textarea name="message" rows="5" required style="width:470px; padding:0.5rem; margin-bottom:1rem;"></textarea> <br> <br>
+
+            <button type="submit" style="background-color:#4CAF50; color:white; padding:0.75rem 1.5rem; border:none; border-radius:8px; cursor:pointer;">Send Message</button>    <br> <br>
+        </form>
+    </div>
+    
+    <div class="socials">
 
       <p id="mail"> : <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">anindyaprofessional122521@gmail.com</a></p>
       <p id="git"><i class="fab fa-github"></i>  : <a href="https://github.com/ani67h">ani67h</a></p>
       <p id="x"> <i class="fab fa-twitter"></i> : <a href="https://x.com/anindya360">anindya360</a></p>
 
-    </div> 
+    </div> <br> <br>
     
+    </div> <br> <br>
+
+    <footer>
+    &copy; 2025 Anindya Ghosh | All rights reserved.
+    </footer>
+
 </body>
 </html>
