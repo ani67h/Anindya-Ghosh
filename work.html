@@ -3,39 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY WORKS</title>
-    <link href="work.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <style>
-    .card{
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      padding: 5px;
+   *{
+    box-sizing: border-box;
+   }
+   body{
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    overflow: auto;
+   } 
+   .container{
+    display: flex;
+    width: 90vw;
+    align-items: stretch;
+    flex-wrap: wrap;
+   }
+   .panel{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    min-height: 300px;;
+    border-radius: 20px;
+    cursor: pointer;
+    flex: 1 1 200px; 
+    min-width: 200px; 
+    margin: 10px;
+    transition: all 0.9s ease-in-out; 
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+   }
+   .panel .content {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    max-width: 300px;
     }
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .panel.active .content{
+    opacity: 1;
+    transform: translateX(0);
     }
-    .section-description {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 50px;
+    .panel.active{
+    flex: 2;
     }
-    body{
-        background-color: #f7eafb;
+    @media(max-width: 480px) {
+        .container{
+            flex-direction: column;
+            height: auto;
+        }
+        .panel{
+            flex: 1 1 auto;
+            height: auto;
+            min-height: auto;
+            width: 100%;
+        }
     }
     footer{
     text-align: center;
     background-color: #333;
     color: #f8f9fa;
     }
-    body{
-        font-family: cursive;
+    .section-title {
+      margin-bottom: 10px;
+      padding-left: 580px;
+    }
+    .section-description {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 50px;
     }
 
 </style>
@@ -43,129 +89,137 @@
 <body>
 
     <section class="container">
-        <br> <h2 class="section-title">MY WORK</h2> <br> 
+        <br> <h2 class="section-title">MY WORK</h2> <br> <br> <br>
         <p class="section-description">
            Welcome to my project showcase! This section highlights some of my best and most meaningful coding projects — built with creativity, precision, and a love for problem-solving. Each card below represents a unique challenge I took on, whether through web development, app design, or automation. These projects reflect not just my technical skills, but also my growth, curiosity, and passion for turning ideas into real, working solutions. 
         </p>    <br> <br> 
     </section>
-    
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <!--Card 1-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="Lucid_Origin_generate_a_picture_of_a_classic_arcade_style_PacM_3.jpg">
-                    <div class="card-body">
-                        <h5 class="card-tittle">Pac-Man Game</h5>
-                        <p class="card-text">A classic Pac-Man game recreated in Scratch, featuring smooth character controls, ghost movement logic, point collection, and clear win/lose conditions. The maze, sound effects, and interactive elements were all custom-designed to provide a fun and functional gameplay experience.</p>
-                        <a href="https://scratch.mit.edu/projects/1045334036" class="btn btn-success">View Project</a>                     
-                    </div>
-                </div>
-            </div>
 
-            <!--Card 2-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="Lucid_Origin_a_vibrant_and_whimsical_digital_painting_of_an_ol_3.jpg">
-                    <div class="card-body">
-                        <h5 class="card-tittle">Paint Box</h5>
-                        <p class="card-text">A simple drawing application made in Scratch, allowing users to draw freely using the mouse. Includes features like color selection, pen size adjustment, and a clear screen button for easy sketching.                        </p>
-                        <a href="https://scratch.mit.edu/projects/1050556180" class="btn btn-success">View Project</a>                     
-                    </div>
-                </div>
+    <!--Card 1-->
+    <div class="card1">
+    <div class="container">
+        <div class="panel" style="background-image: url('Lucid_Origin_generate_a_picture_of_a_classic_arcade_style_PacM_3.jpg');"></div>
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">Pac-Man Game</h5>
+                <p class="card-text">A classic Pac-Man game recreated in Scratch, featuring smooth character controls, ghost movement logic, point collection, and clear win/lose conditions. The maze, sound effects, and interactive elements were all custom-designed to provide a fun and functional gameplay experience.</p>
+                <a href="https://scratch.mit.edu/projects/1045334036" class="btn btn-success">View Project</a>                     
             </div>
-
-            <!--Card 3-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="original-547456ea21f19213cd0266c42050ea59.webp" style="height: 400px;">
-                    <div class="card-body">
-                        <h5 class="card-tittle">Messenger App</h5>
-                        <p class="card-text">A chat application built in Thunkable where users can enter a shared key to join a common chat room. Enables real-time messaging between users in the same room with a simple and user-friendly interface.                        </p>
-                        <a href="https://x.thunkable.com/projectPage/6766f2e80f83ba39b7640198" class="btn btn-success">View Project</a>                     
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </div>   
+    </div> <br> <br> 
 
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <!--Card 4-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="original-200268496d684b2b0f20e3ff420cde6e.webp" style="height: 400px;">
-                    <div class="card-body">
-                        <h5 class="card-tittle">BMI Calculator</h5>
-                        <p class="card-text">A health-focused app created in Thunkable that calculates Body Mass Index (BMI) based on user input for height and weight. Displays the BMI value along with a category (underweight, normal, overweight, etc.) for easy understanding.</p>
-                        <a href="https://x.thunkable.com/projectPage/66eed635de06cd91e2580aaf" class="btn btn-success">View Project</a>                     
-                    </div>
-                </div>
+    <!--Card 2-->
+    <div class="card2">
+    <div class="container">
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">Paint Box</h5>
+                <p class="card-text">A simple drawing application made in Scratch, allowing users to draw freely using the mouse. Includes features like color selection, pen size adjustment, and a clear screen button for easy sketching</p>
+                <a href="https://scratch.mit.edu/projects/1050556180" class="btn btn-success">View Project</a>                     
             </div>
-
-            <!--Card 5-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="capsule_616x353.jpg" style="height: 400px;">
-                    <div class="card-body">
-                        <h5 class="card-tittle">Space Explorer</h5>
-                        <p class="card-text">An AI-powered chatbot designed to answer astronomy-related questions. Built to simulate a conversational assistant like ChatGPT, it provides accurate and engaging responses on topics such as planets, stars, black holes, and space exploration.</p>
-                        <a href="https://x.thunkable.com/projectPage/67545f40277ce1af0038a83f" class="btn btn-success">View Project</a>                     
-                    </div>
-                </div>
-            </div>
-
-            <!--Card 6-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="original-b5277dc4bb828d01ded8e4598ded1951.webp" style="height: 400px;">
-                    <div class="card-body">
-                        <h5 class="card-tittle">Calculator</h5>
-                        <p class="card-text">A basic calculator built using JavaScript, capable of performing standard arithmetic operations such as addition, subtraction, multiplication, and division with a clean and responsive interface.                        </p>
-                        <a href="https://ani67h.github.io/Calculator/" class="btn btn-success">View Project</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
+        <div class="panel" style="background-image: url('Lucid_Origin_a_vibrant_and_whimsical_digital_painting_of_an_ol_3.jpg');"></div>
+    </div>   
+    </div> <br> <br>
 
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-
-            <!--Card 7-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="original-c28d13395123702a03a66e481b4ca95b.webp">
-                    <div class="card-body">
-                        <h5 class="card-tittle">To Do List</h5>
-                        <p class="card-text">A simple and interactive to-do list built with JavaScript that allows users to add, mark, and delete tasks. Helps organize daily activities with a clean and user-friendly interface.</p>
-                        <a href="https://ani67h.github.io/To-Do-List/" class="btn btn-success">View Project</a>
-                    </div>
-                </div>
+    <!--Card 3-->
+    <div class="card3">
+    <div class="container">
+        <div class="panel" style="background-image: url('original-547456ea21f19213cd0266c42050ea59.webp');"></div>
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">Messenger App</h5>
+                <p class="card-text">A chat application built in Thunkable where users can enter a shared key to join a common chat room. Enables real-time messaging between users in the same room with a simple and user-friendly interface.</p>
+                <a href="https://x.thunkable.com/projectPage/6766f2e80f83ba39b7640198" class="btn btn-success">View Project</a>                     
             </div>
-
-            <!--Card 8-->
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="Screenshot 2025-05-08 111017.png">
-                    <div class="card-body">
-                        <h5 class="card-tittle">THE GREEN SPOON</h5>
-                        <p class="card-text">A stylish and modern restaurant page designed to capture the essence of fine dining. Featuring an interactive menu, smooth animations, and a warm aesthetic, The Green Spoon offers users an inviting digital experience—from browsing dishes to exploring reviews and contact info—all crafted with clean, responsive code.                        </p>
-                        <a href="https://ani67h.github.io/My-Restuarant/index.html" class="btn btn-success">View Project</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </div>   <br> <br>
+
+    <!--Card 4-->
+    <div class="card4">
+    <div class="container">
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">BMI Calculator</h5>
+                <p class="card-text">A health-focused app created in Thunkable that calculates Body Mass Index (BMI) based on user input for height and weight. Displays the BMI value along with a category (underweight, normal, overweight, etc.) for easy understanding.</p>
+                <a href="https://x.thunkable.com/projectPage/66eed635de06cd91e2580aaf" class="btn btn-success">View Project</a>                     
+            </div>
+        </div>
+        <div class="panel" style="background-image: url('original-200268496d684b2b0f20e3ff420cde6e.webp');"></div>
+    </div>   
+    </div> <br> <br> 
+
+    <!--Card 5-->
+    <div class="card5">
+    <div class="container">
+        <div class="panel" style="background-image: url('capsule_616x353.jpg');"></div>
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">Space Explorer</h5>
+                <p class="card-text">An AI-powered chatbot designed to answer astronomy-related questions. Built to simulate a conversational assistant like ChatGPT, it provides accurate and engaging responses on topics such as planets, stars, black holes, and space exploration.</p>
+                <a href="https://x.thunkable.com/projectPage/67545f40277ce1af0038a83f" class="btn btn-success">View Project</a>                     
+            </div>
+        </div>
+    </div>   <br> <br>
+
+    <!--Card 6-->
+    <div class="card6">
+    <div class="container">
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">Calculator</h5>
+                <p class="card-text">A basic calculator built using JavaScript, capable of performing standard arithmetic operations such as addition, subtraction, multiplication, and division with a clean and responsive interface.</p>
+                <a href="https://ani67h.github.io/Calculator/" class="btn btn-success">View Project</a>                     
+            </div>
+        </div>
+        <div class="panel" style="background-image: url('original-200268496d684b2b0f20e3ff420cde6e.webp');"></div>
+    </div>   
+    </div> <br> <br>
+
+    <!--card 7-->
+    <div class="card7">
+    <div class="container">
+        <div class="panel" style="background-image: url('original-c28d13395123702a03a66e481b4ca95b.webp');"></div>
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">To Do List</h5>
+                <p class="card-text">A simple and interactive to-do list built with JavaScript that allows users to add, mark, and delete tasks. Helps organize daily activities with a clean and user-friendly interface.</p>
+                <a href="https://ani67h.github.io/To-Do-List/" class="btn btn-success">View Project</a>                     
+            </div>
+        </div>
+    </div>   <br> <br>
+
+    <!--Card 8-->
+    <div class="card8">
+    <div class="container">
+        <div class="panel">
+            <div class="card-body">
+                <h5 class="card-tittle">THE GREEN SPOON</h5>
+                <p class="card-text">A stylish and modern restaurant page designed to capture the essence of fine dining. Featuring an interactive menu, smooth animations, and a warm aesthetic, The Green Spoon offers users an inviting digital experience—from browsing dishes to exploring reviews and contact info—all crafted with clean, responsive code.</p>
+                <a href="https://ani67h.github.io/My-Restuarant/" class="btn btn-success">View Project</a>                     
+            </div>
+        </div>
+        <div class="panel" style="background-image: url('Screenshot 2025-05-08 111017.png');"></div>
+    </div>   
+    </div>    <br> <br>
+
+    <script>
+        const panels = document.querySelectorAll('.panel');
+
+        panels.forEach((panel) => {
+            panel.addEventListener('mouseenter', () => {
+                panel.classList.add('active');
+            });
+            panel.addEventListener('mouseleave', () => {
+                panel.classList.remove('active');
+            });
+        });
+    </script>
 
     <footer>
     &copy; 2025 Anindya Ghosh | All rights reserved.
     </footer>
-
-    <script src="work.js"></script>
 
 </body>
 </html>
