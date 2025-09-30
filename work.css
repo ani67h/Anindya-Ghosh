@@ -1,0 +1,71 @@
+.cn1{
+    background-color: rgb(196, 248, 246);
+}
+.cn1:hover{
+    background-color: rgb(203, 251, 234);
+    transition: 0.6s;
+}
+
+.cn2{
+    background-color: rgb(213, 247, 172);
+}
+.cn2:hover{
+    background-color: rgb(244, 253, 200);
+    transition: 0.6s;
+} 
+
+.cn3{
+    background-color: rgb(245, 226, 249);
+}
+.cn3:hover{
+    background-color: rgb(222, 200, 253);
+    transition: 0.6s;
+} 
+
+.cn4{
+    background-color: rgb(247, 254, 226);
+}
+.cn4:hover{
+    background-color: rgb(233, 253, 200);
+    transition: 0.6s;
+}
+
+.cn5{
+    background-color: rgb(201, 217, 218);
+}
+.cn5:hover{
+    background-color: rgb(212, 224, 239);
+    transition: 0.6s;
+}
+
+.cn6{
+    background-color: rgb(249, 226, 228);
+}
+.cn6:hover{
+    background-color: rgb(247, 224, 210);
+    transition: 0.6s;
+}
+
+.cn7{
+    background-color: rgb(203, 248, 214);
+}
+.cn7:hover{
+    background-color: rgb(234, 246, 214);
+    transition: 0.6s;
+}
+
+.cn8{
+    background-color: rgba(142, 117, 117, 0.407);
+}
+
+.cn8:hover{
+    background-color: rgb(253, 227, 200);
+    transition: 0.6s;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+    background: #522001f5;
+    color: white;  
+}
