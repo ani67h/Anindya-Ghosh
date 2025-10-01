@@ -26,7 +26,6 @@
     }
     body{
         background-color: #d6eef1;
-        font-family: cursive;
     }
     .container{
         background-color: #c1e6dc;
@@ -39,42 +38,101 @@
     background-color: #333;
     color: #f8f9fa;
     }
+    #span{
+    color: #232523;
+    margin-top: -10px;
+    display: block;
+    }
 
 </style>
 
 <body>
     
-    <br> <br> <h2>Contact Me</h2> <br>  <br>
-    <p id="hi">Whether you’ve got a brilliant idea, a challenging problem, or just want to say “hey,” I’d love to hear from you. My inbox is always open — no message is too small, too weird, or too ambitious. Let’s build something cool together, brainstorm the next big thing, or simply talk about space, code, or coffee. Drop in anytime — I don’t bite</p> <br> <br> <br> <br>
+    <br> <h2>Contact Me</h2> <br>  
+    <p id="hi">Whether you’ve got a brilliant idea, a challenging problem, or just want to say “hey,” I’d love to hear from you. My inbox is always open — no message is too small, too weird, or too ambitious. Let’s build something cool together, brainstorm the next big thing, or simply talk about space, code, or coffee. Drop in anytime — I don’t bite</p> <br> 
 
     <div class="container">
-    <div class="form">
-        <form action="https://formspree.io/f/xjkwjlng" method="POST">
+    <div class="contact-right">
+        <form name="submit-to-google-sheet">
             <label for="name">NAME : </label> <br>
-            <input type="text" name="name" required style="width: 470px; padding:0.5rem; margin-bottom:1rem;"> <br> <br>
+            <input type="text" name="Name" required style="width: 470px; padding:0.5rem; margin-bottom:1rem;"> <br> <br>
 
             <label for="email">EMAIL : </label> <br>
-            <input type="email" name="_replyto" required style="width:470px; padding:0.5rem; margin-bottom:1rem;"> <br> <br>
+            <input type="email" name="Email" required style="width:470px; padding:0.5rem; margin-bottom:1rem;"> <br> <br>
 
             <label for="message">MESSAGE : </label> <br>
-            <textarea name="message" rows="5" required style="width:470px; padding:0.5rem; margin-bottom:1rem;"></textarea> <br> <br>
+            <textarea name="Message" rows="5" required style="width:470px; padding:0.5rem; margin-bottom:1rem;"></textarea> <br> <br>
 
             <button type="submit" style="background-color:#4CAF50; color:white; padding:0.75rem 1.5rem; border:none; border-radius:8px; cursor:pointer;">Send Message</button>    <br> <br>
         </form>
+
+        <span id="msg"></span> 
+
     </div>
     
-    <div class="socials">
+    <!--<div class="socials">
 
       <p id="mail"> : <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">anindyaprofessional122521@gmail.com</a></p>
       <p id="x"> <i class="fab fa-twitter"></i> : <a href="https://x.com/anindya360">anindya360</a></p>
 
-    </div> <br> <br>
+    </div> <br> <br>-->
     
     </div> <br> <br>
-
     <footer>
     &copy; 2025 Anindya Ghosh | All rights reserved.
     </footer>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz4N9yCTqRIgrbMGVqXzemIy3OLJlG8n6ThC5hnsuBkFTL_BovcvPgbW3JtPikEQoIwqw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            console.log("Form Submitted!")
+            fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log("Response Received!")
+                    msg.innerHTML = "Message Sent Successfully!"
+                    setTimeout(() => msg.innerHTML = "",5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script>
 
 </body>
 </html>
