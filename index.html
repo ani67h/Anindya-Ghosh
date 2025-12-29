@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANINDYA GHOSH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <style>
     /* Global Styles*/
     body{
         margin: 0;
-        font-family: cursive;
+        font-family: 'Poppins',sans-serif;
         background-color: #e2ebf6;
     }
 
@@ -75,9 +76,7 @@
     text-align: center;
     text-decoration: double;
     }
-    #aniverse{
-        font-family: cursive;
-    }
+
     .about-container{
         max-width: 1100px;
         border-radius: 20px;
@@ -91,18 +90,52 @@
     background-color: #333;
     color: #f8f9fa;
     }
+              nav ul li a:hover{
+        color: rgb(124, 124, 230);
+        font-size: 1.02rem;
+    }
+        nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+        nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 0 23px;
+    }
+        nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(29, 29, 93);
+    }
+        .left{
+        font-size: 1.5rem;
+        color: white;
+    }
 
 </style>
 <body>
     
     <!--Navigation Bar-->
-    <div class="topnav">
-        <a class="active" href="index.html">HOME</a>
-        <a href="contactme.html">CONTACT ME</a>
-        <a href="work.html">MY WORK</a>
-        <a href="certificates.html">ACHIEVEMENTS</a>
-        <a href="projects.html">PROJECTS</a>
-    </div>
+    <header>
+        <nav>
+            <div class="left">Anindya Ghosh</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">ABOUT ME</a></li>
+                    <li><a href="work.html">WORKS</a></li>
+                    <li><a href="certificates.html">ACHIEVEMENTS</a></li>
+                    <li><a href="contactme.html">CONTACT ME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <!--Welcome Banner-->
     <div class="pimg1">
